@@ -1,0 +1,74 @@
+*{
+    box-sizing:border-box;
+}
+
+header{
+    background-color:#af40b9;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 5px;
+
+}
+
+
+header h1{
+    font-family: 'Ranchers', cursive;
+    color: #353230 ;
+    display: inline;
+    font-weight: bolder;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Ranchers', cursive;
+    color: #5DA38B;
+}
+
+header nav{
+    float: right;
+    margin-top: 20px;
+    padding: 0 30px;
+    color: #302d2a ;
+}
+
+header nav ul li {
+    font-family: 'Ranchers', cursive;
+    display: inline-block;
+    padding: 0 10px;
+    font-family: 'Raleway', sans-serif; 
+}
+
+header nav ul li a {
+    font-family: 'Ranchers', cursive;
+    text-decoration: cornsilk;
+    font-size: 15px;
+    color: #353230 ;
+    text-transform: uppercase;
+  
+}
+
+
+body{
+    background-color: #44433c;
+}
+
+
+
+
+
+
+article ul li{
+    font-family: 'Ranchers', cursive;
+    line-height: 25px;
+    color:#8A8578;
+    font-weight: bold;
+}
+
+  
+  #logo{
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
