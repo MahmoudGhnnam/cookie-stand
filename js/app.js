@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  'use strict';
 
@@ -210,3 +211,5 @@
  
  lima.render();
  
+=======
+>>>>>>> master
