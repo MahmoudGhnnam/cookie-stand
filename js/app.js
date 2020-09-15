@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
  'use strict';
 
@@ -205,11 +205,9 @@
          };
          var liEl = document.createElement('li');
          ulEl.appendChild(liEl);
-         liEl.textContent = 'Total : ' + total + ' cookies.';
+         liEl.textContent = 'Total: ' + total + ' cookies.';
      },
  };
  
  lima.render();
  
-=======
->>>>>>> master
