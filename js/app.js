@@ -2,40 +2,41 @@
 
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var store = [];
-function BranchInfo(name, min, max, avg) {
+
+function StoreSale(name, min, max, avg) {
     this.name = name;
-    this.minCustomers = min;
-    this.maxCustomers = max;
-    this.averageSales = avg;
+    this.minSale = min;
+    this.maxSale = max;
+    this.aveSale = avg;
     this.storeCookies = [];
     this.dailyCookie = 0;
     store.push(this);
 }
 
-BranchInfo.prototype.salesPerHour = function () {
+StoreSale.prototype.salesPerHour = function () {
     for (var i = 0; i < storeHours.length; i++) {
-        var x = Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
-        var y = x * this.averageSales;
+        var x = Math.floor(Math.random() * (this.maxSale - this.minSale + 1) + this.minSale);
+        var y = x * this.aveSale;
         this.storeCookies.push(Math.floor(y));
         this.dailyCookie += Math.floor(y);
     }
     this.storeCookies.push(this.dailyCookie);
 };
-new BranchInfo('Seattle', 23, 65, 6.3);
-new BranchInfo('Tokyo', 3, 24, 1.2);
-new BranchInfo('Dubai', 11, 38, 3.7);
-new BranchInfo('Paris', 20, 38, 2.3);
-new BranchInfo('Lima', 2, 16, 4.6);
+new StoreSale('Seattle', 23, 65, 6.3);
+new StoreSale('Tokyo', 3, 24, 1.2);
+new StoreSale('Dubai', 11, 38, 3.7);
+new StoreSale('Paris', 20, 38, 2.3);
+new StoreSale('Lima', 2, 16, 4.6);
 
 var total = 0;
-BranchInfo.prototype.headerFunc = function () {
+StoreSale.prototype.headerFunc = function () {
     var container = document.getElementById("sales");
     var articleEl = document.createElement('article');
     container.appendChild(articleEl);
     articleEl.setAttribute('id', 'table');
-    var headerEl = document.createElement('h3');
-    articleEl.appendChild(headerEl);
-    headerEl.textContent = 'Daily Sales Per Hour';
+    var h3El = document.createElement('h3');
+    articleEl.appendChild(h3El);
+    h3El.textContent = 'Daily Sales Per Hour';
     var tableEl = document.createElement('table');
     articleEl.appendChild(tableEl);
     tableEl.setAttribute('id', 'sales-table');
@@ -54,7 +55,7 @@ BranchInfo.prototype.headerFunc = function () {
     thEl2.textContent = 'Daily Total';
 };
 
-BranchInfo.prototype.tableBody = function () {
+StoreSale.prototype.tableBody = function () {
     var container = document.getElementById("sales-table");
     for (var i = 0; i < store.length; i++) {
         var dataRowEl = document.createElement('tr');
@@ -71,7 +72,7 @@ BranchInfo.prototype.tableBody = function () {
 };
 
 var totals = [];
-BranchInfo.prototype.totals = function () {
+StoreSale.prototype.totals = function () {
     for (var i = 0; i <= storeHours.length; i++) {
         var sumOfSum = 0;
         for (var j = 0; j < store.length; j++) {
@@ -82,7 +83,7 @@ BranchInfo.prototype.totals = function () {
     }
 };
 
-BranchInfo.prototype.totalFun = function () {
+StoreSale.prototype.totalFun = function () {
     var container = document.getElementById("sales-table");
     var totalRowEl = document.createElement('tr');
     container.appendChild(totalRowEl);
