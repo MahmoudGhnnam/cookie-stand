@@ -1,75 +1,167 @@
-*{
-    box-sizing:border-box;
-}
-
-header{
-    background-color:#af40b9;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    padding: 5px;
-
-}
-
-
-header h1{
-    font-family: 'Ranchers', cursive;
-    color: #353230 ;
-    font-weight: bolder;
+body {
+    font-family: 'Indie Flower', cursive;
+    color: #271500;
+    background-color: #A9A9A9;
+    align-content: center;
     text-align: center;
 }
 
-h2{
-    font-family: 'Ranchers', cursive;
-    color: #5DA38B;
+header{
+    display: fixed;
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+    background-image: url(../img/salmon.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-header nav{
+#nav-bar {
+    text-align: right;
     float: right;
-    margin-top: 50px;
-    padding: 0 30px;
-    color: #302d2a ;
-}
+    padding-right: 20px;
 
-header nav ul li {
-    font-family: 'Ranchers', cursive;
-    display: inline-block;
-    padding: 0 10px;
-    font-family: 'Raleway', sans-serif; 
 }
-
-header nav ul li a {
-    font-family: 'Ranchers', cursive;
-    text-decoration: cornsilk;
-    font-size: 15px;
-    color: #353230 ;
+#nav-bar ul li {
+    font-family: 'Indie Flower', cursive;
+    list-style: none;
+    display: inline;
     text-transform: uppercase;
-  
+    color: #B8860B;
+    line-height: 100px;
+    margin: 15px;
+}
+#nav-bar ul{
+    margin-top: 70px;
 }
 
-
-body{
-    background-color: #44433c;
+a{
+    color: #B8860B ;
+    text-decoration: none;
+}
+a:hover{
+    color: #fce4a8 ;
 }
 
-
-
-
-
-
-article ul li{
-    font-family: 'Ranchers', cursive;
-    line-height: 25px;
-    color:#8A8578;
-    font-weight: bold;
+h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 100px;
+    float: left;
+    padding-left: 10px;
+    color: #B8860B;
 }
+main{
+    margin-top: 70px;
+    padding-left: 20px;
+    margin-bottom: 200px;
+}
+    
 
-  
-  #logo{
-    margin-left: 20px;
-    width: 200px;
+#logo{
     margin-top: 15px;
-    margin-bottom: 15px;
-
+    display: inline;
+    width: 150px;
 }
 
+#sales {
+    font-family: 'Indie Flower', cursive;
+    color: #d0e8f3;
+}
+
+table{
+    width: 98%;
+    height: 300px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+th{
+    color:  #B8860B;
+}
+
+#sales ul li {
+    list-style: square;
+    list-style-position: inside;
+    padding-left: 10px;
+    padding-top: 4px;
+    text-align: left;
+}
+.stores{
+    display: inline;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #B8860B;
+}
+footer ul{
+    display: inline;
+    float: right;
+    margin: 5px;
+}
+footer ul li {
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.home article{
+    display: inline-block;
+    width: 40%;
+    height: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.locations{
+    text-align: center;
+}
+
+#copy {
+    font-size: small;
+    text-align: left;
+    margin-right: 30px;
+    margin-top: 70px;
+    float: right;
+}
+
+#family{
+    width: 450px;
+    margin: 15px;
+    margin-top: 30px;
+}
+
+.process {
+    display: inline-block;
+    width: 175px;
+    height: 175px;
+    margin: 10px;
+}
+
+
+strong{
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+#copy{
+    float: left;
+    margin-left: 5px;
+}
+
+h3{
+color: #000000;
+background-color: #B8860B;
+}

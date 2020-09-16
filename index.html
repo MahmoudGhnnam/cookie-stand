@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Salmon Cookies Home Page</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=IBM+Plex+Sans+Condensed&family=Ranchers&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
-        <img id= "logo" src="img/salmon.png" width="100px"><h1>Salmon Cookies</h1>
-        <nav>
+        <h1>Salmon Cookies</h1>
+        <nav id="nav-bar">
             <ul>
-                <li class="nbar"><a href="#">Home</a></li>
-                <li class="nbar"><a href="sales.html">Sales</a></li>
-                <li class="nbar"><a href="#">Contact us</a></li>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="#"> Cookies </a></li>
+                <li><a href="sales.html"> Daily Sales </a></li>
+                <li><a href="#"> Contact Us </a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main>   
+        <section class='home'>
+                 
+            <article class='locations'>
+                <h2> Seattle Location</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10748.246738351803!2d-122.40072886123612!3d47.66379806701415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549015c0f22508c9%3A0x4523b9d1c1dafa38!2sSalmon%20Bay!5e0!3m2!1sen!2sjo!4v1600188742960!5m2!1sen!2sjo" width="450" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p>
+                    <strong>Other Locations:</strong>
+                    <ul>
+                        <li class='stores'> <a href="https://goo.gl/maps/EkoPR1AsYineibdt8" target="_blank">Seattle</a></li>
+                        <li class='stores'> <a href="https://goo.gl/maps/8PfY6gStdEe42sgZ7" target="_blank">Tokyo</a></li>
+                        <li class='stores'> <a href="https://goo.gl/maps/5yf99Ziqn2QKauWv5" target="_blank">Dubai</a></li>
+                        <li class='stores'> <a href="https://goo.gl/maps/cm5E6E33k1f3GzyF7" target="_blank">Paris</a></li>
+                        <li class='stores'> <a href="https://goo.gl/maps/St4wBDbjvBSmS7i59" target="_blank">Lima</a></li>
+                    </ul>
+                </p>
+            </article>
+        
 
     </main>
     <footer>
-
+        <ul>
+            <li>Operating Hours: <br> 6:00 AM - 7:00 PM</li>
+            <li>Contact Us <br> Phone: +0000000000</li>
+        </ul>
+        <section id="copy"> &copy; All Rights Reserved 2020 </se>
     </footer>
-    <script src="/js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
-
-</html>+
+</html>
