@@ -1,11 +1,9 @@
 'use strict';
 
-// stores info
 var openHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var store = [];
 
-//stores object
-function SaleInStore(name, min, max, avg) {
+function SaleStore(name, min, max, avg) {
   this.name = name;
   this.minCust = min;
   this.maxCust = max;
@@ -15,8 +13,7 @@ function SaleInStore(name, min, max, avg) {
   store.push(this);
 }
 
-// random number
-SaleInStore.prototype.salesPerHour = function () {
+SaleStore.prototype.salesPerHour = function () {
   for (var i = 0; i < openHours.length; i++) {
     var x = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
     var y = x * this.averSale;
@@ -26,14 +23,12 @@ SaleInStore.prototype.salesPerHour = function () {
   this.cookie.push(this.inDayCookie);
 };
 
-// new stores added
-new SaleInStore('Seattle', 23, 65, 6.3);
-new SaleInStore('Tokyo', 3, 24, 1.2);
-new SaleInStore('Dubai', 11, 38, 3.7);
-new SaleInStore('Paris', 20, 38, 2.3);
-new SaleInStore('Lima', 2, 16, 4.6);
+new SaleStore('Seattle', 23, 65, 6.3);
+new SaleStore('Tokyo', 3, 24, 1.2);
+new SaleStore('Dubai', 11, 38, 3.7);
+new SaleStore('Paris', 20, 38, 2.3);
+new SaleStore('Lima', 2, 16, 4.6);
 
-// summation of hourly sales
 var totals;
 function totalSum() {
   totals = [];
@@ -47,7 +42,7 @@ function totalSum() {
   }
 }
 
-// table
+
 function headerFunc() {
   var container = document.getElementById('sales');
   var divEl = document.createElement('div');
@@ -104,7 +99,6 @@ function totalFun() {
   }
 }
 
-//render
 headerFunc();
 for (var i = 0; i < store.length; i++) {
   store[i].salesPerHour();
@@ -113,17 +107,15 @@ tableBody();
 totalSum();
 totalFun();
 
-//after event fires
 var count = 5;
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   console.log(event.target);
 
-  // removes old table
+
   var container = document.getElementById('table');
   container.remove();
 
-  // add new store from array
   var name = event.target.sName.value;
   console.log(sName);
   var min = Number(event.target.sMin.value);
@@ -132,9 +124,8 @@ form.addEventListener('submit', function (event) {
   console.log(sMax);
   var avg = Number(event.target.sAvg.value);
   console.log(sAvg);
-  new SaleInStore( name, min, max, avg);
+  new SaleStore( name, min, max, avg);
 
-  // render new table with added stores
   headerFunc();
   console.log(store);
   for (var x = count; x < store.length; x++) {
@@ -146,7 +137,5 @@ form.addEventListener('submit', function (event) {
   console.log(totals);
   totalSum();
   totalFun();
-
-  // reset form to allow for added form
   document.getElementById('form').reset();
 });
